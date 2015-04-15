@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Chiral - Form</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+
+	<style>
+		#PINcode {
+		  border-radius: 20px;
+		}
+
+		#PINform input:focus,
+		#PINform select:focus,
+		#PINform textarea:focus,
+		#PINform button:focus {
+			outline: none;
+		}
+		#PINform {
+			width: 300px;
+			height: 450px;
+			margin:0 auto;
+		}
+		#PINbox {
+			margin: 3%;
+			width: 92%;
+			font-size: 4em;
+			text-align: center;
+			border: none;
+			border-top: 2px solid #337ab7;
+			border-bottom: 2px solid #337ab7;
+		  background: #fff;
+		}
+		.PINbutton {
+			background: #fff;
+			color: #337ab7;
+			border: 2px solid #337ab7;
+			border-radius: 50%;
+			font-size: 1.5em;
+			text-align: center;
+			width: 75px;
+			height: 75px;
+			margin: 5px 11px;
+		}
+		.clear, .enter {
+			font-size: 1em;
+		}
+		.PINbutton:hover {
+			border: 2px solid #0192D0;
+			color: #0192D0;
+		}
+	</style>
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+  	<div class="container" style="margin-top:48px">
+		<div id="PINcode">
+			<form action='' method='get' name='PINform' id='PINform' autocomplete='off'>
+				<input id=PINbox type='password' value='' maxlength="4" name='PINbox' disabled /><br/>
+				<input type='button' class='PINbutton' name='1' value='1' id='1' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='2' value='2' id='2' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='3' value='3' id='3' onClick=addNumber(this); /><br>
+				<input type='button' class='PINbutton' name='4' value='4' id='4' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='5' value='5' id='5' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='6' value='6' id='6' onClick=addNumber(this); /><br>
+				<input type='button' class='PINbutton' name='7' value='7' id='7' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='8' value='8' id='8' onClick=addNumber(this); />
+				<input type='button' class='PINbutton' name='9' value='9' id='9' onClick=addNumber(this); /><br>
+				<input type='button' class='PINbutton clear' name='-' value='clear' id='-' onClick=clearForm(this); />
+				<input type='button' class='PINbutton' name='0' value='0' id='0' onClick=addNumber(this); />
+				<input type='button' class='PINbutton enter' name='+' value='enter' id='+' onClick=submitForm(PINbox); />
+			</form>
+			<a href="ChiralForm_Select.html"><button class="btn btn-lg btn-block">HOME</button></a>
+		</div>
+		<script src="js/PINpad.js"></script>
+    </div>
+
+<img src="img/CS_logo.gif" style="width:20%;max-width:140px;float:right;position:fixed;bottom:15px;right:15px;"/>
+
+	 <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="js/jquery.min.js"></script>
+    <script type="text/javascript" src="cordova.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+    <script src="js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="js/index.js"></script>
+	<script type="text/javascript">
+		app.initialize();
+	</script>
+
+  </body>
+</html>
